@@ -2,18 +2,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e0f7fa; /* Light blue background */
+    background-color: #e0f7fa;
 }
 
 header {
-    background-color: #1e88e5; /* Dark blue header */
+    background-color: #1e88e5;
     color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
 nav {
-    background-color: #1976d2; /* Slightly lighter dark blue for nav */
+    background-color: #1976d2;
     padding: 10px 0;
 }
 
@@ -39,12 +39,17 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 20px;
+    padding: 20px 20px 60px 20px;
     max-width: 800px;
     margin: 0 auto;
-    background-color: #ffffff; /* White background for content */
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    line-height: 1.6;
+    text-align: justify;
 }
 
 #intro {
@@ -93,7 +98,7 @@ main {
 .story {
     text-align: center;
     margin-bottom: 40px;
-    position: relative; /* Required for flag positioning */
+    position: relative;
 }
 
 .story a {
@@ -125,11 +130,50 @@ main {
 }
 
 footer {
-    background-color: #1e88e5; /* Dark blue footer */
+    background-color: #1e88e5;
     color: #fff;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Popup Modal Styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

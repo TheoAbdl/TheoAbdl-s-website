@@ -13,12 +13,12 @@
 <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="stories.html">ABDL Stories</a></li>
-        <li><a href="">Just for Fans</a></li>
+        <li><a href="stories.html">My ABDL Stories</a></li>
+        <li><a href="" class="coming-soon">Just for Fans</a></li>
         <li><a href="https://x.com/TheoTbdl">Twitter (X)</a></li>
-        <li><a href="">ABDL Game</a></li>
-        <li><a href="">Wishlist</a></li>
-        <li><a href="">PayPal</a></li>
+        <li><a href="" class="coming-soon">ABDL Game</a></li>
+        <li><a href="" class="coming-soon">Wishlist</a></li>
+        <li><a href="" class="coming-soon">PayPal</a></li>
     </ul>
 </nav>
 <main>
@@ -29,11 +29,11 @@
         <div class="icon">
             <a href="stories.html">
                 <img src="images/stories.png" alt="ABDL Stories">
-                <p>ABDL Stories</p>
+                <p>My ABDL Stories</p>
             </a>
         </div>
         <div class="icon">
-            <a href="">
+            <a href="" class="coming-soon">
                 <img src="images/jff.png" alt="Just for Fans">
                 <p>Just for Fans</p>
             </a>
@@ -45,19 +45,19 @@
             </a>
         </div>
         <div class="icon">
-            <a href="">
+            <a href="" class="coming-soon">
                 <img src="images/game.png" alt="ABDL Game">
                 <p>ABDL Game</p>
             </a>
         </div>
         <div class="icon">
-            <a href="">
+            <a href="" class="coming-soon">
                 <img src="images/whishlist.png" alt="Wishlist">
                 <p>Wishlist</p>
             </a>
         </div>
         <div class="icon">
-            <a href="">
+            <a href="" class="coming-soon">
                 <img src="images/paypal.png" alt="PayPal">
                 <p>Support Me</p>
             </a>
@@ -67,5 +67,38 @@
 <footer>
     <p>&copy; 2024 Théo ABDL. All rights reserved.</p>
 </footer>
+
+<!-- Popup Modal -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <p>Coming Soon!</p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var links = document.querySelectorAll('a.coming-soon');
+        var popup = document.getElementById('popup');
+        var close = document.querySelector('.close');
+
+        links.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                popup.style.display = 'block';
+            });
+        });
+
+        close.addEventListener('click', function () {
+            popup.style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    });
+</script>
 </body>
 </html>
