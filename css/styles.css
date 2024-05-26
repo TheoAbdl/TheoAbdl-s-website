@@ -5,16 +5,56 @@ body {
     background-color: #e0f7fa;
 }
 
+.profile-picture {
+    width: 70px;
+    height: 70px;
+    border-radius: 30%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ajout de cette ligne pour centrer horizontalement */
     background-color: #1e88e5;
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    position: relative;
+}
+
+h1 {
+    margin: 0; /* Suppression de la marge par défaut pour centrer verticalement */
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.burger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
 }
 
 nav {
-    background-color: #1976d2;
     padding: 10px 0;
+    background-color: #1976d2;
 }
 
 nav ul {
@@ -176,4 +216,34 @@ footer {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav.open ul {
+        display: flex;
+    }
+
+    #icons {
+        flex-direction: column;
+    }
+
+    .icon {
+        margin: 10px 0;
+    }
 }

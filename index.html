@@ -8,9 +8,17 @@
 </head>
 <body>
 <header>
+    <div class="profile-picture">
+        <img src="images/theo.jpg" alt="Théo ABDL">
+    </div>
     <h1>Théo ABDL's website</h1>
+    <div class="burger-menu" id="burgerMenu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
 </header>
-<nav>
+<nav id="navMenu">
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="stories.html">My ABDL Stories</a></li>
@@ -81,6 +89,8 @@
         var links = document.querySelectorAll('a.coming-soon');
         var popup = document.getElementById('popup');
         var close = document.querySelector('.close');
+        var burgerMenu = document.getElementById('burgerMenu');
+        var navMenu = document.getElementById('navMenu');
 
         links.forEach(function (link) {
             link.addEventListener('click', function (event) {
@@ -97,6 +107,10 @@
             if (event.target === popup) {
                 popup.style.display = 'none';
             }
+        });
+
+        burgerMenu.addEventListener('click', function () {
+            navMenu.classList.toggle('open');
         });
     });
 </script>

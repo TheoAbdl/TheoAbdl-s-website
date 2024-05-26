@@ -8,22 +8,38 @@
 </head>
 <body>
 <header>
+    <div class="profile-picture">
+        <img src="images/theo.jpg" alt="Théo ABDL">
+    </div>
     <h1>Retour en couches [ABDL +18]</h1>
+    <div class="burger-menu" id="burgerMenu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
 </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="stories.html">ABDL Stories</a></li>
-            <li><a href="">Just for Fans</a></li>
-            <li><a href="">Twitter (X)</a></li>
-            <li><a href="">ABDL Game</a></li>
-            <li><a href="">Wishlist</a></li>
-            <li><a href="">PayPal</a></li>
-        </ul>
-    </nav>
+<nav id="navMenu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="stories.html">My ABDL Stories</a></li>
+        <li><a href="" class="coming-soon">Just for Fans</a></li>
+        <li><a href="https://x.com/TheoTbdl">Twitter (X)</a></li>
+        <li><a href="" class="coming-soon">ABDL Game</a></li>
+        <li><a href="" class="coming-soon">Wishlist</a></li>
+        <li><a href="" class="coming-soon">PayPal</a></li>
+    </ul>
+</nav>
 <main>
     <article>
-        <h2>Retour en couches [ABDL +18]</h2>
+        <div style="display: flex; align-items: center;">
+            <h2>Retour en couches [ABDL +18]</h2>
+            <a href="https://www.wattpad.com/story/238148490-retour-en-couches-abdl-%2B18" style="margin-left: 10px; display: flex; align-items: center; text-decoration: none;">
+                <span style="margin-right: 5px;">> Aussi disponible sur </span>
+                <img src="images/wattpad-logo.png" alt="Wattpad Logo" style="width: 200px; height: 60px; margin-right: 5px;">
+            </a>
+        </div>
+
+        <p>Arthur emménage avec Liam après avoir quitté sa famille d'accueil. Très vite, le comportement de son nouveau tuteur devient suspicieux, jusqu'à ce qu'un incident arrive, l'obligeant à porter des couches à nouveau et confirmant ses soupçons.</p>
 
         <h3>Chapitre 1</h3>
 
@@ -974,5 +990,44 @@
 <footer>
     <p>&copy; 2024 Théo ABDL. All rights reserved.</p>
 </footer>
+
+<!-- Popup Modal -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <p>Coming Soon!</p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var links = document.querySelectorAll('a.coming-soon');
+        var popup = document.getElementById('popup');
+        var close = document.querySelector('.close');
+        var burgerMenu = document.getElementById('burgerMenu');
+        var navMenu = document.getElementById('navMenu');
+
+        links.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                popup.style.display = 'block';
+            });
+        });
+
+        close.addEventListener('click', function () {
+            popup.style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+
+        burgerMenu.addEventListener('click', function () {
+            navMenu.classList.toggle('open');
+        });
+    });
+</script>
 </body>
 </html>

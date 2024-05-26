@@ -8,22 +8,37 @@
 </head>
 <body>
 <header>
+    <div class="profile-picture">
+        <img src="images/theo.jpg" alt="Théo ABDL">
+    </div>
     <h1>Back to diapers [ABDL +18]</h1>
+    <div class="burger-menu" id="burgerMenu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
 </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="stories.html">ABDL Stories</a></li>
-            <li><a href="" class="coming-soon">Just for Fans</a></li>
-            <li><a href="https://x.com/TheoTbdl">Twitter (X)</a></li>
-            <li><a href="" class="coming-soon">ABDL Game</a></li>
-            <li><a href="" class="coming-soon">Wishlist</a></li>
-            <li><a href="" class="coming-soon">PayPal</a></li>
-        </ul>
-    </nav>
+<nav id="navMenu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="stories.html">My ABDL Stories</a></li>
+        <li><a href="" class="coming-soon">Just for Fans</a></li>
+        <li><a href="https://x.com/TheoTbdl">Twitter (X)</a></li>
+        <li><a href="" class="coming-soon">ABDL Game</a></li>
+        <li><a href="" class="coming-soon">Wishlist</a></li>
+        <li><a href="" class="coming-soon">PayPal</a></li>
+    </ul>
+</nav>
 <main>
     <article>
         <h2>Back to diapers [ABDL +18]</h2>
+
+        <p>I originally wrote this story in French, but I wanted to share it with my English-speaking audience. I made the translation myself with the help of translation software, so I hope it's not too bad. Enjoy!</p>
+
+        <p>Arthur moves in with Liam after leaving his foster family. Very quickly, his new guardian's behavior becomes suspicious, until an incident occurs, forcing him to wear diapers again and confirming his suspicions.</p>
+
+        <p><strong>Warning:</strong> This story contains adult content and is intended for readers over 18 years old.</p>
+
             <h3>Chapter 1</h3>
 
         <p>When Arthur woke up, the usual sounds of children shouting reached his ears. He got up and opened the shutters to observe the source of the noise. Laughing and playing children in the large park—this was his everyday life. In a way, they were his family; they all lived together in this big house that belonged to the foster family who had taken him in. Unfortunately, he would have to leave it because today was his 18th birthday. Eighteen, the age he dreaded the most. Despite the house being huge, due to lack of space, the children had to leave at this age, either to another family or to a relative until they were fully independent. After watching the children with nostalgia, he glanced at the picture on his bedside table. A man and a woman stood, smiling, with a camera in hand. His parents were journalists, and when they were on assignment in Iraq, a bomb exploded near the hotel where they were staying. Arthur was only three years old at the time. He picked up the picture and placed it in his suitcase before closing it. The goodbyes to the family were brief. His adoptive mother, seeing his worry, reassured him:</p>
@@ -58,7 +73,7 @@
 
         <p> "And... do you live here alone?"</p>
 
-        <p> "Just call me 'you,' finally! But yes, alone in this big house... Your presence will be a change for me, you know."</p>
+        <p> "Yes, alone in this big house... Your presence will be a change for me, you know."</p>
 
         <p> They entered the house. The entrance opened directly into a living room, open to the kitchen, all very spacious. Next to the kitchen was a staircase, separated by a small corridor.</p>
 
@@ -934,6 +949,8 @@
         var links = document.querySelectorAll('a.coming-soon');
         var popup = document.getElementById('popup');
         var close = document.querySelector('.close');
+        var burgerMenu = document.getElementById('burgerMenu');
+        var navMenu = document.getElementById('navMenu');
 
         links.forEach(function (link) {
             link.addEventListener('click', function (event) {
@@ -950,6 +967,10 @@
             if (event.target === popup) {
                 popup.style.display = 'none';
             }
+        });
+
+        burgerMenu.addEventListener('click', function () {
+            navMenu.classList.toggle('open');
         });
     });
 </script>
